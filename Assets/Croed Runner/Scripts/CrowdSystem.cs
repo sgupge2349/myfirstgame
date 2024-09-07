@@ -58,6 +58,20 @@ public class CrowdSystem : MonoBehaviour
             case BonusType.Addition:
                 AddRunners(bonusAmount);
                 break;
+
+            case BonusType.Product:
+                int runnersToAdd = (runnerParent.childCount * bonusAmount) - runnerParent.childCount;
+                AddRunners(runnersToAdd);
+                break;
+
+            case BonusType.Difference:
+                RemoveRunner(bonusAmount);
+                break;
+
+            case BonusType.Division:
+                int runnersToRemove = runnerParent.childCount - (runnerParent.childCount / bonusAmount);
+                RemoveRunner(runnersToRemove);
+                break;
         }
     }
 
@@ -66,6 +80,22 @@ public class CrowdSystem : MonoBehaviour
         for(int i=0; i < amount; i++)
         {
             Instantiate(runnerPrefab, runnerParent);
+        }
+    }
+
+    private void RemoveRunner(int amount)
+    {
+        if(amount > runnerParent.childCount)
+        {
+            amount = runnerParent.childCount;
+        }
+        int runnersAmount = runnerParent.childCount;
+
+        for(int i =runnersAmount - 1;i>=runnersAmount - amount; i--)
+        {
+            Transform runnerToDestroy = runnerParent.GetChild(i);
+            runnerToDestroy.SetParent(null);
+            Destroy(runnerToDestroy.gameObject);
         }
     }
 }
