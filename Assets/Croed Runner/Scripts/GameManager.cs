@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static Action<GameState> onGameStateChanged;
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(gameObject);
         }
@@ -37,5 +37,12 @@ public class GameManager : MonoBehaviour
     {
         this.gameState = gameState;
         onGameStateChanged?.Invoke(gameState);
+
+        Debug.Log("Gam State changed to :" + gameState);
+    }
+
+    public bool IsGameState()
+    {
+        return gameState == GameState.Game;
     }
 }
