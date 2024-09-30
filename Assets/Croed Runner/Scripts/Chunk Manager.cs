@@ -6,9 +6,8 @@ public class ChunkManager : MonoBehaviour
 {
     public static ChunkManager instance;
 
-    [Header("Settings")]
-    [SerializeField] private Chunk[] chunksPrefabs;
-    [SerializeField] private Chunk[] levelChunks;
+    [Header("Elements")]
+    [SerializeField] private LevelSO[] levels;
     private GameObject finishLine;
 
     // Start is called before the first frame update
@@ -25,7 +24,8 @@ public class ChunkManager : MonoBehaviour
     }
     void Start()
     {
-        CreateOderedLevel();
+        //CreateOderedLevel();
+        GenerateLevel();
         finishLine = GameObject.FindWithTag("Finish");
     }
 
@@ -35,7 +35,35 @@ public class ChunkManager : MonoBehaviour
         
     }
 
-    private void CreateOderedLevel()
+
+
+
+    private void GenerateLevel()
+    {
+        int currentLevel = GetLevel();
+
+        currentLevel = currentLevel % levels.Length;
+
+        LevelSO level = levels[currentLevel];
+
+        CreateLevel(level.chunks);
+    }
+   
+    public float GetFinishZ()
+    {
+        return finishLine.transform.position.z;
+    }
+
+    public int GetLevel()
+    {
+        return PlayerPrefs.GetInt("Level",0);
+    }
+
+
+
+
+
+    private void CreateLevel(Chunk[] levelChunks)
     {
         Vector3 chunkPosition = Vector3.zero;
         for (int i = 0; i < levelChunks.Length; i++)
@@ -57,7 +85,7 @@ public class ChunkManager : MonoBehaviour
         }
     }
 
-    private void CreateRandomLebel()
+    /*private void CreateRandomLebel()
     {
         Vector3 chunkPosition = Vector3.zero;
 
@@ -78,14 +106,5 @@ public class ChunkManager : MonoBehaviour
 
 
         }
-    }
-    public float GetFinishZ()
-    {
-        return finishLine.transform.position.z;
-    }
-
-    public int GetLevel()
-    {
-        return PlayerPrefs.GetInt("Level",0);
-    }
+    }*/
 }
