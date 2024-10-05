@@ -1109,8 +1109,13 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Radius: 58.5
   m_Height: 236.9
+=======
+  m_Radius: 15.3
+  m_Height: 147.8
+>>>>>>> 2271038bc6f246faeb0233cdd3eefa850e580df4
   m_Direction: 1
   m_Center: {x: 0, y: 73.8, z: 0}
 --- !u!1 &5385153651098448696
