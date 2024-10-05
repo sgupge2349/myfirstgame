@@ -14,10 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunks:
   - {fileID: 1739400794580467498, guid: 0da4b443308c8d1499a896f86de164da, type: 3}
-<<<<<<< HEAD
   - {fileID: 1739400794580467498, guid: 74eec709f5b28e24986c4bde1c76849d, type: 3}
-=======
-  - {fileID: 1739400794580467498, guid: a5da553e3d4cf9548a7712f62cbc7df4, type: 3}
->>>>>>> 2271038bc6f246faeb0233cdd3eefa850e580df4
   - {fileID: 5894199792445961672, guid: 41b1ad86f49914647ba0ab7b6dfcbd4c, type: 3}
   - {fileID: 5894199792445961672, guid: 9efb553fe616911439decdb892994837, type: 3}
