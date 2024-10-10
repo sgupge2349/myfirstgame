@@ -61,6 +61,10 @@ public class PlayerController : MonoBehaviour
         {
             StartMoving();
         }
+        else if(gameState == GameManager.GameState.Gameover || gameState == GameManager.GameState.LevelComplete)
+        {
+            StopMoving();
+        }
     }
 
     private void StartMoving()
@@ -70,7 +74,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator.Run();
     }
 
-    private void StopMovnig()
+    private void StopMoving()
     {
         canMove= false;
         playerAnimator.Idle();

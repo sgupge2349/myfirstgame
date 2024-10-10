@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5888703169564791364
+--- !u!1 &6654801191473969647
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4988053632526237371}
-  - component: {fileID: 4755333143157739077}
-  - component: {fileID: 1024795025069641151}
-  - component: {fileID: 9197052333478226633}
+  - component: {fileID: 9143337208407625950}
+  - component: {fileID: 7547733217142118950}
+  - component: {fileID: 8136296628287748367}
+  - component: {fileID: 8329257764641160880}
   m_Layer: 0
   m_Name: Chunk Renderer
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4988053632526237371
+--- !u!4 &9143337208407625950
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888703169564791364}
+  m_GameObject: {fileID: 6654801191473969647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -6.2302, z: 0}
-  m_LocalScale: {x: 10, y: 12.4604, z: 20}
+  m_LocalScale: {x: 10, y: 12.4604, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6432115709987786758}
+  m_Father: {fileID: 5854210492054922252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4755333143157739077
+--- !u!33 &7547733217142118950
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888703169564791364}
+  m_GameObject: {fileID: 6654801191473969647}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1024795025069641151
+--- !u!23 &8136296628287748367
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888703169564791364}
+  m_GameObject: {fileID: 6654801191473969647}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9197052333478226633
+--- !u!65 &8329257764641160880
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888703169564791364}
+  m_GameObject: {fileID: 6654801191473969647}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &9139710983939759075
+--- !u!1 &6854399061269456460
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,57 +113,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6432115709987786758}
-  - component: {fileID: 1739400794580467498}
+  - component: {fileID: 5854210492054922252}
+  - component: {fileID: 5894199792445961672}
   m_Layer: 0
-  m_Name: Medium Chunk Enemies 20
+  m_Name: Long Chunk Enemies 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6432115709987786758
+--- !u!4 &5854210492054922252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139710983939759075}
+  m_GameObject: {fileID: 6854399061269456460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.25, y: 0, z: 0.11}
+  m_LocalPosition: {x: 21.38, y: 0, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4988053632526237371}
-  - {fileID: 4195153735235822946}
+  - {fileID: 9143337208407625950}
+  - {fileID: 4520371311512003419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1739400794580467498
+--- !u!114 &5894199792445961672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139710983939759075}
+  m_GameObject: {fileID: 6854399061269456460}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffab310c544ab2d4f969aedb357f7efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 10, y: 10, z: 20}
---- !u!1001 &6074444458152442677
+  size: {x: 10, y: 10, z: 30}
+--- !u!1001 &5823005709862468876
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6432115709987786758}
+    m_TransformParent: {fileID: 5854210492054922252}
     m_Modifications:
     - target: {fileID: 7084891856271153662, guid: 8bfa5576713a70040bc47b4cba89fb21,
         type: 3}
       propertyPath: amount
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7959247117781196375, guid: 8bfa5576713a70040bc47b4cba89fb21,
         type: 3}
@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 7959247117781196375, guid: 8bfa5576713a70040bc47b4cba89fb21,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7959247117781196375, guid: 8bfa5576713a70040bc47b4cba89fb21,
         type: 3}
@@ -225,9 +225,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfa5576713a70040bc47b4cba89fb21, type: 3}
---- !u!4 &4195153735235822946 stripped
+--- !u!4 &4520371311512003419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7959247117781196375, guid: 8bfa5576713a70040bc47b4cba89fb21,
     type: 3}
-  m_PrefabInstance: {fileID: 6074444458152442677}
+  m_PrefabInstance: {fileID: 5823005709862468876}
   m_PrefabAsset: {fileID: 0}

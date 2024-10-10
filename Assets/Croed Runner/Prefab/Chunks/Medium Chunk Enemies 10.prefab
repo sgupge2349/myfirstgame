@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 6432115709987786758}
   - component: {fileID: 1739400794580467498}
   m_Layer: 0
-  m_Name: Medium Chunk Enemies 20
+  m_Name: Medium Chunk Enemies 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
