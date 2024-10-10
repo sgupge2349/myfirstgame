@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -10,8 +9,6 @@ public class UIManager : MonoBehaviour
     [Header("Elements")]
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject gamePanel;
-    [SerializeField] private GameObject gameoverPanel;
-    [SerializeField] private GameObject levelcompletePanel;
     [SerializeField] private Slider progressBar;
     [SerializeField] private Text levelText;
 
@@ -20,16 +17,9 @@ public class UIManager : MonoBehaviour
     {
         progressBar.value = 0;
         gamePanel.SetActive(false);
-        gameoverPanel.SetActive(false);
-
         levelText.text = "Level" + (ChunkManager.instance.GetLevel() + 1);
+    }
 
-        GameManager.onGameStateChanged += GameStateChangedCallback;
-    }
-    private void OnDestroy()
-    {
-        GameManager.onGameStateChanged -= GameStateChangedCallback;
-    }
     // Update is called once per frame
     void Update()
     {
@@ -37,28 +27,6 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void GameStateChangedCallback(GameManager.GameState gameState)
-    {
-        if(gameState == GameManager.GameState.Gameover)
-        {
-            ShowGameover();
-        }else if(gameState == GameManager.GameState.LevelComplete)
-        {
-            ShowLevelComplete();
-        }
-    }
-
-    public void RetryButtonPressed()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-
-    public void ShowGameover()
-    {
-        gamePanel.SetActive(false);
-        gameoverPanel.SetActive(true);
-    }
     public void PlayButtonPressed()
     {
         GameManager.instance.SetGameState(GameManager.GameState.Game);
@@ -66,11 +34,7 @@ public class UIManager : MonoBehaviour
         menuPanel.SetActive(false);//button push delete panel
         gamePanel.SetActive(true);//push button active panel
     }
-    private void ShowLevelComplete()
-    {
-        gamePanel.SetActive(false);
-        levelcompletePanel.SetActive(true);
-    }
+
     public void UpdateProgressBar()
     {
         if (!GameManager.instance.IsGameState())
